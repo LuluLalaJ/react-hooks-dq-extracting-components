@@ -1,10 +1,9 @@
 import React from "react"
 import Contact from './Contact'
 
-function Nav({contacts}) {
-    console.log('inside nav', contacts)
+function Nav({contacts, active}) {
     const renderContacts = contacts.map(contact => {
-        return <Contact key={contact.id} contact={contact.name}/>
+        return <Contact key={contact.id} contact={contact.name} active={active}/>
     })
 
     return(

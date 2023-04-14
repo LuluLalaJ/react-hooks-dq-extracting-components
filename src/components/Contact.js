@@ -1,8 +1,10 @@
 import React from "react";
 
-function Contact({contact}) {
+function Contact({contact, active}) {
+    const activeClass = (contact === active ? "contact active" : "contact")
+
     return(
-        <li className="contact">
+        <li className={activeClass}>
         <div className="icon">{contact[0]}</div>
         {contact}
         </li>
@@ -10,10 +12,3 @@ function Contact({contact}) {
 }
 
 export default Contact
-
-
-/* <li className="contact active">
-        <div className="icon">P</div>
-        Pamela
-        </li> 
-        ---> need to add state? to change activity */
